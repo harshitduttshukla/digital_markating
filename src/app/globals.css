@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #10131d;
+  --color-ink-2: #171b29;
+  --color-ink-3: #1f2436;
+  --color-violet: #7055f7;
+  --color-violet-soft: #8f7bff;
+  --color-lime: #b7f36b;
+  --color-paper: #f5f6fa;
+  --color-text-dark: #171923;
+  --color-muted: #9298aa;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-line-dark: rgb(23 25 35 / 0.1);
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-card: 1.5rem;
+
+  --animate-drift: drift 18s ease-in-out infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes drift {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(6%, -4%, 0) scale(1.12); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-ink text-white font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { @apply bg-violet text-white; }
+  :focus-visible {
+    outline: 2px solid var(--color-lime);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  [id] { scroll-margin-top: 6rem; }
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8;
+  }
+  .section-y {
+    @apply py-20 sm:py-28;
+  }
+  .text-gradient {
+    background: linear-gradient(100deg, var(--color-lime) 0%, #d9ff9e 40%, var(--color-violet-soft) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .noise-mask {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
