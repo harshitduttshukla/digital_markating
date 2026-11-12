@@ -1,4 +1,4 @@
-# GROWTHLAB — Digital Growth Agency Website
+# Tesoap Lab — Digital Growth Agency Website
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Framer Motion · React Hook Form + Zod
 

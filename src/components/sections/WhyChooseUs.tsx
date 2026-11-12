@@ -17,7 +17,7 @@ export function WhyChooseUs() {
       <div className="container-x relative grid gap-14 lg:grid-cols-2 lg:gap-20">
         <div>
           <SectionHeading
-            eyebrow="Why GROWTHLAB"
+            eyebrow="Why Tesoap Lab"
             title={<span id="why-heading">Marketing That Makes Business Sense.</span>}
             description="We judge our work the way your CFO would: by what it costs, what it returns, and how predictably it scales."
           />

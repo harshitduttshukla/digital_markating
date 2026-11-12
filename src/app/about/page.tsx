@@ -34,7 +34,7 @@ export default function AboutPage() {
     <>
       <PageHero
         crumbs={[{ name: "About", path: "/about" }]}
-        eyebrow="About GROWTHLAB"
+        eyebrow="About Tesoap Lab"
         title={<>Your growth partner for the <span className="text-gradient">digital world.</span></>}
         description={siteConfig.coreMessage}
       />

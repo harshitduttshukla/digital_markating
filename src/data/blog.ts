@@ -9,7 +9,7 @@ export const posts: BlogPost[] = [
     category: "SEO",
     date: "2026-10-14",
     readingMinutes: 7,
-    author: "GROWTHLAB Editorial",
+    author: "Tesoap Lab Editorial",
     art: "waves",
     content: [
       { paragraphs: ["Search behaviour in India has some features of its own. Most searches happen on mobile, many buyers mix English with regional languages, and local intent like 'near me' is very common. A good SEO strategy has to account for all of this."] },
@@ -26,7 +26,7 @@ export const posts: BlogPost[] = [
     category: "Paid Media",
     date: "2026-09-28",
     readingMinutes: 6,
-    author: "GROWTHLAB Editorial",
+    author: "Tesoap Lab Editorial",
     art: "bars",
     content: [
       { paragraphs: ["Google Ads and Meta Ads aren't really competing for the same job. Google captures demand that already exists. Meta creates demand among people who haven't started looking yet."] },
@@ -42,7 +42,7 @@ export const posts: BlogPost[] = [
     category: "Lead Generation",
     date: "2026-09-09",
     readingMinutes: 8,
-    author: "GROWTHLAB Editorial",
+    author: "Tesoap Lab Editorial",
     art: "steps",
     content: [
       { paragraphs: ["A low cost per lead looks good on a report until the sales team spends its week chasing people who were never going to buy. Lead quality is a marketing problem as much as a sales problem."] },
@@ -58,7 +58,7 @@ export const posts: BlogPost[] = [
     category: "Local SEO",
     date: "2026-08-21",
     readingMinutes: 9,
-    author: "GROWTHLAB Editorial",
+    author: "Tesoap Lab Editorial",
     art: "rings",
     content: [
       { paragraphs: ["For clinics, restaurants, coaching institutes and showrooms, the Google map pack often decides who gets the call. Here's how to improve your chances."] },
