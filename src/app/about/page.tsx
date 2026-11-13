@@ -43,13 +43,33 @@ export default function AboutPage() {
       <section className="section-y bg-paper text-text-dark">
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <p className="font-display text-3xl leading-tight font-semibold sm:text-4xl">
-              Ambitious businesses deserve marketing partners who think like owners.
+            <p className="font-mono text-xs tracking-[0.2em] text-violet uppercase">Our story</p>
+            <p className="mt-4 font-display text-3xl leading-tight font-semibold sm:text-4xl">
+              Ambitious businesses deserve marketing partners who think <span className="text-violet">like owners.</span>
             </p>
+            <div className="mt-8 h-1 w-16 rounded-full bg-gradient-to-r from-violet to-lime" />
+            <dl className="mt-8 grid grid-cols-2 gap-6 border-t border-black/10 pt-8">
+              <div>
+                <dt className="text-sm text-[#6b7085]">Based in</dt>
+                <dd className="mt-1 font-display text-xl font-semibold">Mumbai</dd>
+              </div>
+              <div>
+                <dt className="text-sm text-[#6b7085]">Working across</dt>
+                <dd className="mt-1 font-display text-xl font-semibold">India &amp; UAE</dd>
+              </div>
+              <div className="col-span-2">
+                <dt className="text-sm text-[#6b7085]">Under one strategy</dt>
+                <dd className="mt-3 flex flex-wrap gap-2">
+                  {["SEO", "Paid media", "Social", "Email", "CRO"].map((t) => (
+                    <span key={t} className="rounded-full border border-black/10 bg-white px-3 py-1 text-sm font-medium">{t}</span>
+                  ))}
+                </dd>
+              </div>
+            </dl>
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-lg leading-relaxed text-[#3c4155] lg:col-span-6 lg:col-start-7">
             {/* TODO: replace with the agency's real founding story, team size and location. */}
-            <p>
+            <p className="font-display text-2xl leading-snug font-medium text-text-dark">
               Too many growing companies spend on marketing without knowing what it returns. Reports show impressions and clicks. Meanwhile the questions that matter go unanswered: <em>which channel actually brings customers, and what does each one cost?</em>
             </p>
             <p>
