@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/ui/LegalPage";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
-export const metadata: Metadata = buildMetadata({ title: "Terms & Conditions", description: `Terms governing the use of the ${siteConfig.name} website.`, path: "/terms" });
+export const metadata: Metadata = buildMetadata({ title: "Terms & Conditions", description: `The terms and conditions governing use of the ${siteConfig.name} website, our content and our digital marketing services, including liability and IP.`, path: "/terms" });
 
 export default function TermsPage() {
   return (

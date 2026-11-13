@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/ui/LegalPage";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
-export const metadata: Metadata = buildMetadata({ title: "Privacy Policy", description: `How ${siteConfig.name} collects, uses and protects your personal data.`, path: "/privacy-policy" });
+export const metadata: Metadata = buildMetadata({ title: "Privacy Policy", description: `How ${siteConfig.name} collects, uses, stores and protects personal data shared through our website and contact forms, and the rights you have over it.`, path: "/privacy-policy" });
 
 export default function PrivacyPage() {
   return (

@@ -71,7 +71,19 @@ export const serviceSchema = (s: { name: string; description: string; path: stri
   provider: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
 });
 
-export const faqSchema = (faqs: { question: string; answer: string }[]) => ({
+/** Service offered to a specific city (city landing pages). */
+export const localServiceSchema = (s: { name: string; description: string; path: string; city: string; country: string }) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: s.name,
+  serviceType: s.name,
+  description: s.description,
+  url: absoluteUrl(s.path),
+  areaServed: { "@type": "City", name: s.city, containedInPlace: { "@type": "Country", name: s.country } },
+  provider: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+});
+
+export const faqSchema =(faqs: { question: string; answer: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({
