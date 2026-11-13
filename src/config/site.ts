@@ -10,7 +10,7 @@ export const siteConfig = {
   coreMessage:
     "We don't just generate traffic. We turn digital visibility into measurable business growth.",
   description:
-    "Tesoap Lab is a digital growth agency helping ambitious Indian businesses grow through strategic SEO, Google Ads, performance marketing and conversion optimisation.",
+    "Tesoap Lab is a digital growth agency helping ambitious businesses grow through strategic SEO, Google Ads, performance marketing and conversion optimisation.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://digitalmarkating.vercel.app",
   locale: "en_IN",
   contact: {

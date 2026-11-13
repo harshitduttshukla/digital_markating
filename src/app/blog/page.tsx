@@ -11,7 +11,7 @@ import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "Insights — SEO & Digital Marketing Blog",
-  description: "Practical guides on SEO, Google Ads, performance marketing, local SEO and lead generation for Indian businesses.",
+  description: "Practical guides on SEO, Google Ads, performance marketing, local SEO and lead generation for growing businesses.",
   path: "/blog",
 });
 
@@ -23,7 +23,7 @@ export default function BlogPage() {
         crumbs={[{ name: "Insights", path: "/blog" }]}
         eyebrow="Insights"
         title={<>Insights that move <span className="text-gradient">businesses forward.</span></>}
-        description="Practical, no-fluff guides on search, paid media and conversion, written for Indian business owners and marketing teams."
+        description="Practical, no-fluff guides on search, paid media and conversion, written for business owners and marketing teams."
       />
       <section className="section-y bg-paper text-text-dark">
         <div className="container-x">

@@ -59,7 +59,7 @@ export function TrustSection() {
                 </li>
               ))}
             </ul>
-            <p className="mt-8 text-sm text-muted">Plus startups, D2C brands and service businesses across India.</p>
+            <p className="mt-8 text-sm text-muted">Plus startups, D2C brands and service businesses of every size.</p>
           </Reveal>
 
           {/* Commitments + certifications */}

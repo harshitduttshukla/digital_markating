@@ -15,7 +15,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "SEO, Google Ads & Performance Marketing Agency in India",
+    title: "SEO, Google Ads & Performance Marketing Agency",
     description: siteConfig.description,
     path: "/",
   }),

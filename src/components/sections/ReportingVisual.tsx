@@ -44,7 +44,7 @@ export function ReportingVisual() {
 
       <div className="mt-7 grid grid-cols-3 gap-3 border-t border-line pt-6">
         {[
-          { l: "Cost / lead", v: "₹—" },
+          { l: "Cost / lead", v: "—" },
           { l: "Qualified %", v: "—%" },
           { l: "ROAS", v: "—×" },
         ].map((k) => (

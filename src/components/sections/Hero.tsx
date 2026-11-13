@@ -51,7 +51,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.7 }}
           >
-            We help ambitious Indian businesses grow through strategic SEO, performance marketing, and data-driven digital experiences.
+            We help ambitious businesses grow through strategic SEO, performance marketing, and data-driven digital experiences.
           </motion.p>
 
           <motion.div

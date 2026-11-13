@@ -55,8 +55,8 @@ export const services: Service[] = [
       { question: "Will you need access to our website?", answer: "Ideally yes — CMS, Google Search Console and Analytics access lets us implement fixes quickly. We can also work through your developers." },
       { question: "Do you work with Shopify, WordPress and custom sites?", answer: "Yes. Our process is platform-agnostic, and we adapt technical recommendations to your stack." },
     ],
-    metaTitle: "SEO Services in India",
-    metaDescription: "Technical, on-page and off-page SEO for Indian businesses. Rank for the searches that bring real enquiries and revenue — with transparent reporting.",
+    metaTitle: "SEO Services That Drive Revenue",
+    metaDescription: "Technical, on-page and off-page SEO for growing businesses. Rank for the searches that bring real enquiries and revenue — with transparent reporting.",
   },
   {
     slug: "google-ads",
@@ -67,7 +67,7 @@ export const services: Service[] = [
     description:
       "Search, Display, Shopping and remarketing campaigns built around profitable conversions — not clicks or impressions.",
     capabilities: ["Search campaigns", "Display advertising", "Remarketing", "Shopping campaigns", "Campaign optimization"],
-    heroHeadline: "Every rupee in Google Ads should earn its place.",
+    heroHeadline: "Every click in Google Ads should earn its place.",
     overview: [
       "Google Ads rewards precision. We structure accounts around intent, set up conversion tracking you can trust, and optimise toward cost per qualified lead or ROAS — whichever reflects your real economics.",
       "You keep full ownership of your ad account and data at all times.",
@@ -105,7 +105,7 @@ export const services: Service[] = [
       { question: "Can you take over an existing account?", answer: "Yes. We start with an audit so improvements are based on your account's actual history." },
     ],
     metaTitle: "Google Ads & PPC Management",
-    metaDescription: "Google Ads and PPC management for Indian businesses — Search, Shopping, Display and remarketing campaigns optimised for profitable conversions.",
+    metaDescription: "Google Ads and PPC management for growing businesses — Search, Shopping, Display and remarketing campaigns optimised for profitable conversions.",
   },
   {
     slug: "performance-marketing",
@@ -154,7 +154,7 @@ export const services: Service[] = [
       { question: "Can you integrate with our CRM?", answer: "Yes. We commonly connect HubSpot, Zoho, Salesforce and LeadSquared to send lead quality back to ad platforms." },
     ],
     metaTitle: "Performance Marketing Agency",
-    metaDescription: "Full-funnel performance marketing across Google, Meta and LinkedIn — measured on CAC, ROAS and revenue for Indian startups and growing brands.",
+    metaDescription: "Full-funnel performance marketing across Google, Meta and LinkedIn — measured on CAC, ROAS and revenue for startups and growing brands.",
   },
   {
     slug: "local-seo",
@@ -179,7 +179,7 @@ export const services: Service[] = [
     approach: [
       { title: "Profile optimisation", description: "Categories, services, products, photos and posts on Google Business Profile." },
       { title: "Location pages", description: "Unique, useful pages for each location or service area." },
-      { title: "Citation clean-up", description: "Consistent name, address and phone across relevant Indian directories." },
+      { title: "Citation clean-up", description: "Consistent name, address and phone across relevant local directories." },
       { title: "Review engine", description: "Ethical review request flows and response templates." },
     ],
     benefits: [
@@ -199,11 +199,11 @@ export const services: Service[] = [
     faqs: [
       { question: "Do I need a physical address for local SEO?", answer: "You need a verifiable business location or a defined service area. We'll guide you through Google's guidelines for your business type." },
       { question: "Can you manage multiple branches?", answer: "Yes. We set up a consistent structure for every location and report on each one individually." },
-      { question: "Do you buy or write fake reviews?", answer: "Never. Fake reviews violate Google's policies and Indian consumer protection norms. We help you ask real customers at the right time." },
+      { question: "Do you buy or write fake reviews?", answer: "Never. Fake reviews violate Google's policies and consumer protection laws. We help you ask real customers at the right time." },
       { question: "How soon will I see map pack improvements?", answer: "Profile and citation fixes can show movement within a few weeks; competitive categories take longer." },
     ],
     metaTitle: "Local SEO & Google Business Profile",
-    metaDescription: "Local SEO services for Indian businesses — Google Business Profile optimisation, citations, location pages and ethical review strategy.",
+    metaDescription: "Local SEO services for growing businesses — Google Business Profile optimisation, citations, location pages and ethical review strategy.",
   },
   {
     slug: "content-marketing",
@@ -252,7 +252,7 @@ export const services: Service[] = [
       { question: "Can you write in Hindi or regional languages?", answer: "We can scope regional-language content on request depending on your audience." },
     ],
     metaTitle: "Content Marketing & SEO Content",
-    metaDescription: "Search-led content marketing for Indian businesses — topic clusters, expert briefs, SEO articles and landing page copy that converts.",
+    metaDescription: "Search-led content marketing for growing businesses — topic clusters, expert briefs, SEO articles and landing page copy that converts.",
   },
   {
     slug: "conversion-optimization",
@@ -271,7 +271,7 @@ export const services: Service[] = [
     problems: [
       { title: "Good traffic, few leads", description: "Visitors arrive but the page doesn't persuade them to act." },
       { title: "Long, leaky forms", description: "Every unnecessary field and step loses potential customers." },
-      { title: "Mobile friction", description: "Most Indian traffic is mobile, but pages are designed for desktop." },
+      { title: "Mobile friction", description: "Most traffic is mobile, but pages are designed for desktop." },
       { title: "Opinion-driven changes", description: "Redesigns launch without data and nobody knows if they helped." },
     ],
     approach: [

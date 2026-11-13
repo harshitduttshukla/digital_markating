@@ -80,10 +80,7 @@ export function ContactForm() {
           <input id="email" type="email" autoComplete="email" className={inputCls} placeholder="you@company.com" aria-invalid={!!errors.email} {...register("email")} />
         </Field>
         <Field label="Phone number" error={errors.phone?.message} id="phone" required>
-          <div className="flex">
-            <span className="grid place-items-center rounded-l-xl border border-r-0 border-line bg-white/[0.06] px-3.5 font-mono text-sm text-white/80" aria-hidden>+91</span>
-            <input id="phone" type="tel" inputMode="numeric" autoComplete="tel-national" className={cn(inputCls, "rounded-l-none")} placeholder="98765 43210" aria-invalid={!!errors.phone} aria-label="Phone number (India, +91)" {...register("phone")} />
-          </div>
+          <input id="phone" type="tel" inputMode="tel" autoComplete="tel" className={inputCls} placeholder="+91 98765 43210 or +971 50 123 4567" aria-invalid={!!errors.phone} {...register("phone")} />
         </Field>
         <Field label="Company name" error={errors.company?.message} id="company" required>
           <input id="company" autoComplete="organization" className={inputCls} placeholder="Company Pvt. Ltd." aria-invalid={!!errors.company} {...register("company")} />

@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Industries We Serve",
-  description: "Digital marketing strategies for e-commerce, real estate, healthcare, education, hospitality and SaaS businesses in India.",
+  description: "Digital marketing strategies for e-commerce, real estate, healthcare, education, hospitality and SaaS businesses.",
   path: "/industries",
 });
 
