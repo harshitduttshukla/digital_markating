@@ -2,6 +2,8 @@ import Link from "next/link";
 import { AlertTriangle, Check, ArrowRight } from "lucide-react";
 import type { Service } from "@/types";
 import { services } from "@/data/services";
+import { cities, landingPages, landingPath } from "@/data/pages";
+import { coreToLanding } from "@/data/pages/hubs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -90,6 +92,28 @@ export function ServiceDetail({ service }: { service: Service }) {
           <FAQAccordion faqs={service.faqs} tone="light" />
         </div>
       </section>
+
+      {/* Local versions of this service (internal linking to city pages) */}
+      {coreToLanding[service.slug] && (
+        <section className="pt-20 sm:pt-24" aria-labelledby="cities-heading">
+          <div className="container-x">
+            <h2 id="cities-heading" className="text-2xl font-semibold sm:text-3xl">{service.shortTitle} by city</h2>
+            <ul className="mt-6 grid gap-4 md:grid-cols-3">
+              {cities.map((c) => {
+                const key = coreToLanding[service.slug];
+                return (
+                  <li key={c}>
+                    <Link href={landingPath(c, key)} className="group flex items-center justify-between rounded-2xl border border-line bg-ink-2 p-5 transition-colors hover:border-lime/50">
+                      <span>{landingPages[c][key].label}</span>
+                      <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="pt-20 sm:pt-24" aria-labelledby="related-heading">

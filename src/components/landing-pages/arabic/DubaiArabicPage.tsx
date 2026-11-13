@@ -22,7 +22,7 @@ export function DubaiArabicPage({ service, c }: { service: LandingServiceKey; c:
   const enPath = `/dubai/${service}`;
   const crumbs = [
     { name: "الرئيسية", path: "/" },
-    { name: "الخدمات", path: "/services" },
+    { name: "دبي", path: "/dubai" },
     { name: c.label, path: arabicPath(service) },
   ];
 

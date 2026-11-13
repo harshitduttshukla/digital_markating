@@ -9,6 +9,7 @@ import { ProcessSection } from "@/components/sections/ProcessSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { LocationsSection } from "@/components/sections/LocationsSection";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
@@ -33,6 +34,7 @@ export default function HomePage() {
       <ProcessSection />
       <Testimonials />
       <BlogSection />
+      <LocationsSection />
       <FinalCTA />
     </>
   );

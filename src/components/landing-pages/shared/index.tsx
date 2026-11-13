@@ -19,7 +19,7 @@ export function LandingCrumbs({ city, service, tone = "dark", className }: { cit
   return (
     <div className={cn(tone === "light" && "[&_a:hover]:text-text-dark [&_[aria-current]]:text-text-dark [&_ol]:text-[#5b6075]", className)}>
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-        <Breadcrumbs items={[{ name: "Services", path: "/services" }, { name: page.label, path: landingPath(city, service) }]} />
+        <Breadcrumbs items={[{ name: cityNames[city], path: `/${city}` }, { name: page.label, path: landingPath(city, service) }]} />
         {city === "dubai" && (
           <Link href={`/ar/dubai/${service}`} hrefLang="ar" lang="ar" className="rounded-full border border-white/20 px-3 py-1 text-sm text-white/80 transition-colors hover:border-lime hover:text-white">
             العربية
