@@ -4,6 +4,7 @@ import { siteConfig, whatsappLink } from "@/config/site";
 import { serviceLinks, companyLinks, legalLinks } from "@/config/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { SocialIcon } from "./SocialIcon";
+import { cities, cityNames, landingPath, landingServices, serviceNames } from "@/data/pages/types";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -53,6 +54,23 @@ export function Footer() {
           </ul>
         </div>
       </div>
+
+      <nav aria-label="Locations" className="container-x border-t border-line py-8">
+        <div className="grid gap-6 sm:grid-cols-3">
+          {cities.map((city) => (
+            <div key={city}>
+              <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-muted">{cityNames[city]}</h2>
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+                {landingServices.map((s) => (
+                  <li key={s}>
+                    <Link href={landingPath(city, s)} className="text-white/70 transition-colors hover:text-white">{serviceNames[s]}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </nav>
 
       <div aria-hidden className="container-x select-none overflow-hidden">
         <p className="translate-y-[18%] text-center font-display text-[19vw] font-bold leading-none tracking-tight text-white/[0.035] lg:text-[13.5rem]">

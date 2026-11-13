@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     path: "/",
   }),
-  title: { absolute: `${siteConfig.name} — SEO, Google Ads & Performance Marketing Agency in India` },
+  title: { absolute: `${siteConfig.name} — SEO & Performance Marketing Agency` },
 };
 
 export default function HomePage() {
