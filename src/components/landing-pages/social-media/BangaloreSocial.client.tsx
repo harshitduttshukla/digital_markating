@@ -65,14 +65,14 @@ function Post({ accent, title, kind, light }: { accent: string; title: string; k
   );
 }
 
-const deckStyles = ["bg-lime text-ink", "bg-white text-ink", "bg-ink-3 text-white", "bg-violet-soft text-white", "bg-[#d9ff9e] text-ink", "bg-ink text-white border border-white/15"];
+const deckStyles = ["bg-lime text-ink", "bg-ink-3 text-white border border-white/10", "bg-violet text-white", "bg-ink-2 text-white border border-white/10", "bg-violet/70 text-white", "bg-ink-3 text-white border border-lime/30"];
 
 /** Draggable deck of content-format cards. */
 export function DragDeck({ cards }: { cards: { kind: string; line: string }[] }) {
   const wrap = useRef<HTMLDivElement>(null);
   return (
     <div ref={wrap} className="overflow-hidden">
-      <p className="container-x mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-white/60"><Hand aria-hidden className="size-4" /> Drag to browse</p>
+      <p className="container-x mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted"><Hand aria-hidden className="size-4" /> Drag to browse</p>
       <motion.ul drag="x" dragConstraints={wrap} dragElastic={0.12} className="flex w-max cursor-grab gap-5 px-4 active:cursor-grabbing sm:px-[max(1.5rem,calc((100vw-1240px)/2+2rem))]">
         {cards.map((c, i) => (
           <motion.li

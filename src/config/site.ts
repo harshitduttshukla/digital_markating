@@ -15,9 +15,9 @@ export const siteConfig = {
   locale: "en_IN",
   contact: {
     email: "reach@tesoap.com",
-    phoneDisplay: "+91 730667586", // TODO: verify — Indian mobiles have 10 digits after +91
-    phoneE164: "+91730667586",
-    whatsappNumber: "91730667586", // digits only, with country code
+    phoneDisplay: "+91 73036 67586",
+    phoneE164: "+917303667586",
+    whatsappNumber: "917303667586", // digits only, with country code
     whatsappMessage: "Hi Tesoap Lab, I'd like to discuss a growth audit for my business.",
     city: "Mumbai, India", // street address intentionally not published yet
     hours: "Mon – Sat, 10:00 – 19:00 IST",
