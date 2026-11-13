@@ -14,6 +14,7 @@ export function Footer() {
         <div className="lg:col-span-4">
           <Logo />
           <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-muted">{siteConfig.coreMessage}</p>
+          {siteConfig.social.length > 0 && (
           <ul className="mt-6 flex gap-2" aria-label="Social media">
             {siteConfig.social.map((s) => (
               <li key={s.label}>
@@ -29,6 +30,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          )}
         </div>
         <FooterCol title="Services" links={serviceLinks} className="lg:col-span-3" />
         <FooterCol title="Company" links={companyLinks} className="lg:col-span-2" />

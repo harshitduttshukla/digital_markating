@@ -53,7 +53,8 @@ export const organizationSchema = () => ({
   url: siteConfig.url,
   description: siteConfig.description,
   email: siteConfig.contact.email,
-  sameAs: siteConfig.social.map((s) => s.href),
+  telephone: siteConfig.contact.phoneE164,
+  ...(siteConfig.social.length ? { sameAs: siteConfig.social.map((s) => s.href) } : {}),
 });
 
 export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
