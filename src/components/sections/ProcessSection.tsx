@@ -42,8 +42,8 @@ export function ProcessSection() {
             <motion.li
               key={s.n}
               className="relative flex gap-6 pb-12 last:pb-0"
-              initial={reduce ? false : { opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={reduce ? false : { opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20% 0px" }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
@@ -55,7 +55,7 @@ export function ProcessSection() {
               >
                 {s.n}
               </span>
-              <div className="flex-1 rounded-[var(--radius-card)] border border-line bg-ink-2 p-6 transition-colors hover:border-violet/40 sm:p-7">
+              <div className="min-w-0 flex-1 rounded-[var(--radius-card)] border border-line bg-ink-2 p-6 transition-colors hover:border-violet/40 sm:p-7">
                 <h3 className="text-2xl font-semibold">{s.title}</h3>
                 <p className="mt-2 leading-relaxed text-muted">{s.text}</p>
               </div>

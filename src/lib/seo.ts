@@ -7,24 +7,30 @@ interface PageMetaInput {
   path: string;
   type?: "website" | "article";
   publishedTime?: string;
+  /** hreflang alternates, e.g. { en: "/dubai/seo", ar: "/ar/dubai/seo", "x-default": "/dubai/seo" } */
+  languages?: Record<string, string>;
+  locale?: string;
 }
 
 export const absoluteUrl = (path = "/") => new URL(path, siteConfig.url).toString();
 
 /** Builds per-route metadata with canonical, Open Graph and Twitter tags. */
-export function buildMetadata({ title, description, path, type = "website", publishedTime }: PageMetaInput): Metadata {
+export function buildMetadata({ title, description, path, type = "website", publishedTime, languages, locale }: PageMetaInput): Metadata {
   const url = absoluteUrl(path);
   const ogImage = absoluteUrl(`/og?title=${encodeURIComponent(title)}`);
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(languages ? { languages: Object.fromEntries(Object.entries(languages).map(([k, v]) => [k, absoluteUrl(v)])) } : {}),
+    },
     openGraph: {
       title: `${title} | ${siteConfig.name}`,
       description,
       url,
       siteName: siteConfig.name,
-      locale: siteConfig.locale,
+      locale: locale ?? siteConfig.locale,
       type,
       ...(publishedTime ? { publishedTime } : {}),
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
@@ -72,11 +78,12 @@ export const serviceSchema = (s: { name: string; description: string; path: stri
 });
 
 /** Service offered to a specific city (city landing pages). */
-export const localServiceSchema = (s: { name: string; description: string; path: string; city: string; country: string }) => ({
+export const localServiceSchema = (s: { name: string; description: string; path: string; city: string; country: string; inLanguage?: string }) => ({
   "@context": "https://schema.org",
   "@type": "Service",
   name: s.name,
   serviceType: s.name,
+  ...(s.inLanguage ? { inLanguage: s.inLanguage } : {}),
   description: s.description,
   url: absoluteUrl(s.path),
   areaServed: { "@type": "City", name: s.city, containedInPlace: { "@type": "Country", name: s.country } },
