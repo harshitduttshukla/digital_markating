@@ -67,7 +67,7 @@ export const services: Service[] = [
     description:
       "Search, Display, Shopping and remarketing campaigns built around profitable conversions — not clicks or impressions.",
     capabilities: ["Search campaigns", "Display advertising", "Remarketing", "Shopping campaigns", "Campaign optimization"],
-    heroHeadline: "Every rupee in Google Ads should earn its place.",
+    heroHeadline: "Every click in Google Ads should earn its place.",
     overview: [
       "Google Ads rewards precision. We structure accounts around intent, set up conversion tracking you can trust, and optimise toward cost per qualified lead or ROAS — whichever reflects your real economics.",
       "You keep full ownership of your ad account and data at all times.",

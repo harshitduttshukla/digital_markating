@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
 
 const values = [
   { icon: Target, title: "Outcomes over outputs", text: "We measure success in leads, customers and revenue — not in reports delivered or posts published." },
-  { icon: Eye, title: "Radical transparency", text: "You see what we see: live dashboards, every change logged, every rupee accounted for." },
+  { icon: Eye, title: "Radical transparency", text: "You see what we see: live dashboards, every change logged, every dollar of spend accounted for." },
   { icon: Handshake, title: "Partners, not vendors", text: "We learn your business, challenge assumptions and say no to work that won't pay back." },
   { icon: Scale, title: "Ethical by default", text: "No fake reviews, no ranking guarantees, no grey-hat tactics that put your brand at risk." },
 ];
