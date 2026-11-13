@@ -59,7 +59,7 @@ export function Footer() {
         <div className="grid gap-6 sm:grid-cols-3">
           {cities.map((city) => (
             <div key={city}>
-              <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-muted">{cityNames[city]}</h2>
+              <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-muted"><Link href={`/${city}`} className="hover:text-white">{cityNames[city]}</Link></h2>
               <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
                 {landingServices.map((s) => (
                   <li key={s}>
