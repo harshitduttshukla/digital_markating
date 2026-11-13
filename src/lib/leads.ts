@@ -24,7 +24,7 @@ export async function deliverLead(lead: ContactFormData & { meta: Record<string,
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...lead, phone: `+91${lead.phone}`, receivedAt: new Date().toISOString() }),
+      body: JSON.stringify({ ...lead, receivedAt: new Date().toISOString() }),
       signal: AbortSignal.timeout(8000),
     });
     return res.ok ? { ok: true } : { ok: false, reason: "delivery_failed" };

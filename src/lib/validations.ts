@@ -21,12 +21,16 @@ export const contactSchema = z.object({
     .trim()
     .email("Please enter a valid email address")
     .max(120),
-  // Indian mobile: 10 digits starting 6–9 (country code +91 is shown as a prefix)
+  // International phone, normalised to +<country><number>. A bare 10-digit Indian mobile gets +91.
   phone: z
     .string()
     .trim()
-    .transform((v) => v.replace(/[\s-]/g, "").replace(/^(\+91|0091|91)(?=\d{10}$)/, "").replace(/^0(?=\d{10}$)/, ""))
-    .pipe(z.string().regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian mobile number")),
+    .transform((v) => {
+      const s = v.replace(/[\s\-().]/g, "").replace(/^00/, "+");
+      if (/^[6-9]\d{9}$/.test(s)) return `+91${s}`;
+      return s.startsWith("+") ? s : `+${s}`;
+    })
+    .pipe(z.string().regex(/^\+[1-9]\d{6,14}$/, "Enter a valid phone number with country code, e.g. +971 50 123 4567")),
   company: z.string().trim().min(2, "Please enter your company name").max(120),
   website: z
     .string()

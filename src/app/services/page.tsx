@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Digital Marketing Services",
-  description: "SEO, Google Ads, performance marketing, local SEO, content marketing and CRO — integrated digital marketing services for Indian businesses.",
+  description: "SEO, Google Ads, performance marketing, local SEO, content marketing and CRO — integrated digital marketing services for growing businesses.",
   path: "/services",
 });
 

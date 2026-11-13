@@ -11,7 +11,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
-  description: `${siteConfig.name} is a data-driven digital growth agency for Indian businesses. Learn about our principles, approach and what it's like to work with us.`,
+  description: `${siteConfig.name} is a data-driven digital growth agency for ambitious businesses. Learn about our principles, approach and what it's like to work with us.`,
   path: "/about",
 });
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <p className="font-display text-3xl leading-tight font-semibold sm:text-4xl">
-              Indian businesses deserve marketing partners who think like owners.
+              Ambitious businesses deserve marketing partners who think like owners.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-lg leading-relaxed text-[#3c4155] lg:col-span-6 lg:col-start-7">
